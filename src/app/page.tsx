@@ -9,16 +9,31 @@ export default function Home() {
     ];
   return (
     <main className="min-h-screen bg-fundo">
-      <Header />
       
-      {/* Hero Section */}
-      <section className="bg-preto-suave text-branco-principal py-20 px-6 border-b border-cinza-divisor">
-        <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4 text-dourado">Doces Artesanais que Encantam</h1>
-          <h2 className="text-xl md:text-2xl mb-8 text-cinza-texto">Brigadeiros, bolos e trufas feitos com carinho e ingredientes selecionados</h2>
-          <button className="bg-dourado hover:bg-dourado-hover text-fundo px-8 py-3 rounded-full font-bold text-lg transition-colors shadow-lg">
-            Encomende Agora
+      {/* Hero Section com imagem de fundo */}
+      <section className="relative min-h-screen flex items-center justify-center">
+        {/* Imagem de fundo */}
+        <Image
+          src="/imagens/tela_home_saboriste.jpeg"
+          alt="Doces artesanais Saboriste"
+          fill
+          className="object-cover"
+          priority
+        />
+        {/* Overlay escuro para melhorar leitura do texto */}
+        <div className="absolute inset-0 bg-black/40"></div>
+        
+        {/* Header posicionado no topo */}
+        <Header />
+        
+        {/* Conteúdo centralizado */}
+        <div className="relative z-10 text-center px-6">
+          <h1 className="text-4xl md:text-6xl font-bold mb-4 text-branco-principal">Doces Artesanais que Encantam</h1>
+          <h2 className="text-xl md:text-2xl mb-8 text-branco-principal/90">Brigadeiros, bolos e trufas feitos com carinho e ingredientes selecionados</h2>
+          <button className="bg-[#E07A5F] hover:bg-[#c9684f] text-white px-8 py-3 rounded-full font-bold text-lg transition-colors shadow-lg">
+            Encomendar Agora
           </button>
+          <p className="mt-4 text-[#E07A5F] text-sm">Entrega disponível sob consulta</p>
         </div>
       </section>
 
