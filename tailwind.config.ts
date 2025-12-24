@@ -9,31 +9,21 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // Cores personalizadas para a doceria
-        primary: {
-          50: '#fdf2f8',
-          100: '#fce7f3',
-          200: '#fbcfe8',
-          300: '#f9a8d4',
-          400: '#f472b6',
-          500: '#ec4899',
-          600: '#db2777',
-          700: '#be185d',
-          800: '#9d174d',
-          900: '#831843',
-        },
-        secondary: {
-          50: '#fff7ed',
-          100: '#ffedd5',
-          200: '#fed7aa',
-          300: '#fdba74',
-          400: '#fb923c',
-          500: '#f97316',
-          600: '#ea580c',
-          700: '#c2410c',
-          800: '#9a3412',
-          900: '#7c2d12',
-        },
+        // Paleta Premium Clássica - Saboriste
+        // Cores principais
+        fundo: '#0E0E0E',           // Preto carvão (fundo do site)
+        'preto-suave': '#1A1A1A',   // Preto secundário
+        dourado: '#C9A24D',         // Dourado quente (CTA/botão)
+        'dourado-hover': '#E6C77A', // Champagne (hover do botão)
+        
+        // Neutros
+        'branco-principal': '#F5F5F5', // Off-white (texto principal)
+        'cinza-texto': '#B5B5B5',      // Cinza médio
+        'cinza-divisor': '#2A2A2A',    // Cinza escuro
+        
+        // Cores de apoio (produto)
+        chocolate: '#4A2E1F',       // Marrom cacau
+        caramelo: '#887A3B',        // Dourado doce
       },
     },
   },
