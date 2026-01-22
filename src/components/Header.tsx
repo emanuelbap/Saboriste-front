@@ -2,13 +2,12 @@ export default function Header() {
   return (
     <header className="absolute top-0 left-0 right-0 z-10 bg-transparent text-branco-principal py-4 px-6">
       <div className="max-w-6xl mx-auto flex items-center justify-between">
-        <h1 className="text-2xl font-bold text-[#E07A5F]">Saboriste</h1>
+        <h1 className="text-3xl font-bold text-ouro">Saboriste</h1>
         
         <nav>
           <ul className="flex items-center gap-6">
-            <li><a href="#quem-somos" className="hover:text-[#E07A5F] cursor-pointer transition-colors">quem somos</a></li>
+            <li><a href="#quem-somos" className="hover:text-[#E07A5F] cursor-pointer transition-colors">Quem somos</a></li>
             <li><a href="#cardapio" className="hover:text-[#E07A5F] cursor-pointer transition-colors">Cardápio</a></li>
-            <li><a href="#localizacao" className="hover:text-[#E07A5F] cursor-pointer transition-colors">Localização</a></li>
             <li><a href="#encomendar" className="hover:text-[#E07A5F] cursor-pointer transition-colors">Encomendar Agora</a></li>
           </ul>
         </nav>

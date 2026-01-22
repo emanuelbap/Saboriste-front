@@ -15,6 +15,7 @@ const config: Config = {
         'preto-suave': '#1A1A1A',   // Preto secundário
         dourado: '#C9A24D',         // Dourado quente (CTA/botão)
         'dourado-hover': '#E6C77A', // Champagne (hover do botão)
+        ouro: '#D4AF37',
         
         // Neutros
         'branco-principal': '#F5F5F5', // Off-white (texto principal)

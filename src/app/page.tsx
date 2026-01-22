@@ -31,7 +31,11 @@ export default function Home() {
           <h1 className="text-4xl md:text-6xl font-bold mb-4 text-branco-principal">Doces Artesanais que Encantam</h1>
           <h2 className="text-xl md:text-2xl mb-8 text-branco-principal/90">Brigadeiros, bolos e trufas feitos com carinho e ingredientes selecionados</h2>
           <button className="bg-[#E07A5F] hover:bg-[#c9684f] text-white px-8 py-3 rounded-full font-bold text-lg transition-colors shadow-lg">
+            <a href={`https://wa.me/${55021971378699}?text=${"Olá, gostaria de encomendar... "}`}
+          target="_blank"
+          rel="noopener noreferrer">
             Encomendar Agora
+            </a>
           </button>
           <p className="mt-4 text-[#E07A5F] text-sm">Entrega disponível sob consulta</p>
         </div>
