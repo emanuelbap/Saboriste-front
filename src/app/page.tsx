@@ -3,9 +3,13 @@ import Image from "next/image";
 
 export default function Home() {
     const menu = [
-        {id: "b1", name: "Brigadeiro Tradicional", price: "R$3,50"},
-        {id: "b2", name: "Brigadeiro de maracujá", price: "R$4,00"},
-        {id: "b3", name: "Brigadeiro de Ferrero Roche", price: "R$4,50"}
+        {id: "b1", name: "Brigadeiro casadinho", price: "R$4,50", imagem: "/imagens/doce_casadinho.png"},
+        {id: "b2", name: "Brigadeiro de maracujá", price: "R$4,50", imagem: "/imagens/doce_maracuja.png"},
+        {id: "b3", name: "Brigadeiro de limao", price: "R$4,50", imagem: "/imagens/doce_limao.png"},
+        {id: "b4", name: "Brigadeiro de abacaxi", price: "R$4,50", imagem: "/imagens/doce_abacaxi.png"},
+        {id: "b5", name: "Brigadeiro de franbuesa", price: "R$4,50", imagem: "/imagens/doce_franbuesa.png"},
+        {id: "b6", name: "Brigadeiro de banana", price: "R$4,50", imagem: "/imagens/doce_banana.png"},
+        {id: "b7", name: "Brigadeiro de laranja", price: "R$4,50", imagem: "/imagens/doce_laranja.png"}
     ];
   return (
     <main className="min-h-screen bg-fundo">
@@ -89,8 +93,13 @@ export default function Home() {
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6">
             {menu.map((item) => (
               <div key={item.id} className="bg-preto-suave rounded-xl shadow-md p-4 sm:p-6 hover:shadow-xl transition-shadow border border-cinza-divisor hover:border-dourado">
-                <div className="w-full h-32 sm:h-40 bg-chocolate rounded-lg mb-4 flex items-center justify-center text-4xl">
-                  🍫
+                <div className="relative w-full h-40 sm:h-48 rounded-lg mb-4 overflow-hidden">
+                  <Image
+                    src={item.imagem}
+                    alt={item.name}
+                    fill
+                    className="object-contain"
+                  />
                 </div>
                 <h4 className="text-lg sm:text-xl font-semibold text-branco-principal mb-2">{item.name}</h4>
                 <p className="text-xl sm:text-2xl font-bold text-dourado">{item.price}</p>
