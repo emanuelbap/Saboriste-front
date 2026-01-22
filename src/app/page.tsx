@@ -1,4 +1,5 @@
 import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 import Image from "next/image";
 
 export default function Home() {
@@ -85,10 +86,10 @@ export default function Home() {
 
 
 
-      {/* Destaques Section */}
-      <section className="bg-fundo py-12 sm:py-16 px-4 sm:px-6">
+      {/* Cardápio Section */}
+      <section id="cardapio" className="bg-fundo py-12 sm:py-16 px-4 sm:px-6">
         <div className="max-w-6xl mx-auto">
-          <h3 className="text-2xl sm:text-3xl font-bold text-center text-dourado mb-8 sm:mb-10">✨ Destaques</h3>
+          <h3 className="text-2xl sm:text-3xl font-bold text-center text-dourado mb-8 sm:mb-10">✨ Cardápio</h3>
           
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6">
             {menu.map((item) => (
@@ -108,6 +109,9 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Footer */}
+      <Footer />
     </main>
   )
 }
