@@ -3,6 +3,29 @@ import Footer from "@/components/Footer";
 import Image from "next/image";
 
 export default function Home() {
+    const organizationJsonLd = {
+      '@context': 'https://schema.org',
+      '@type': 'Organization',
+      name: 'Saboriste',
+      description:
+        'Doceria artesanal especializada em brigadeiros gourmet, trufas e doces artesanais.',
+      url: 'https://saboriste.vercel.app/',
+      logo: 'https://saboriste.vercel.app/imagens/logo_saboriste.png',
+      image: 'https://saboriste.vercel.app/imagens/tela_home_saboriste.jpeg',
+      telephone: '+55 21 97137-8699',
+      contactPoint: {
+        '@type': 'ContactPoint',
+        telephone: '+55 21 97137-8699',
+        contactType: 'sales',
+        areaServed: 'Rio de Janeiro, RJ',
+        availableLanguage: 'Portuguese',
+      },
+      areaServed: {
+        '@type': 'City',
+        name: 'Rio de Janeiro',
+      },
+    };
+
     const menu = [
         {id: "b1", name: "Brigadeiro casadinho", price: "R$4,50", imagem: "/imagens/doce_casadinho.png"},
         {id: "b2", name: "Brigadeiro de maracujá", price: "R$4,50", imagem: "/imagens/doce_maracuja.png"},
@@ -14,6 +37,12 @@ export default function Home() {
     ];
   return (
     <main className="min-h-screen bg-fundo">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(organizationJsonLd).replace(/</g, '\\u003c'),
+        }}
+      />
       
       {/* Hero Section com imagem de fundo */}
       <section className="relative min-h-screen flex items-center justify-center">
@@ -33,7 +62,7 @@ export default function Home() {
         
         {/* Conteúdo centralizado */}
         <div className="relative z-10 text-center px-4 sm:px-6 max-w-2xl mx-auto">
-          <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold mb-4 text-branco-principal leading-tight">Doces Artesanais que Encantam</h1>
+          <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold mb-4 text-branco-principal leading-tight">Saboriste: Doces Artesanais que Encantam</h1>
           <h2 className="text-lg sm:text-xl md:text-2xl mb-8 text-branco-principal/90">Brigadeiros, bolos e trufas feitos com carinho e ingredientes selecionados</h2>
           <button className="bg-[#E07A5F] hover:bg-[#c9684f] text-white px-6 sm:px-8 py-3 rounded-full font-bold text-base sm:text-lg transition-colors shadow-lg">
             <a href={`https://wa.me/${55021971378699}?text=${"Olá, gostaria de encomendar... "}`}
